@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="dk.newtec.tiaca.MainActivity"
+    android:background="#584b4b">
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/cameraButton"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/light_camera"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:onClick="onShowTrackPuck" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/settingsButton"
+        android:layout_alignTop="@+id/cameraButton"
+        android:layout_toEndOf="@+id/cameraButton"
+        android:src="@drawable/light_changelog"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:onClick="onShowSettings" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/debugButton"
+
+        android:layout_alignTop="@+id/cameraButton"
+        android:layout_toEndOf="@+id/settingsButton"
+        android:src="@drawable/light_200_arrow"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:onClick="onShowDebug" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Camera"
+        android:id="@+id/textView"
+        android:layout_below="@+id/cameraButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/cameraButton"
+        android:layout_alignStart="@+id/cameraButton"
+        android:gravity="center"
+        android:textColor="#e4e1e1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Settings"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/settingsButton"
+        android:layout_alignEnd="@+id/settingsButton"
+        android:layout_alignStart="@+id/settingsButton"
+        android:gravity="center"
+        android:textColor="#e4e1e1" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Debug"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/debugButton"
+        android:gravity="center"
+        android:layout_alignEnd="@+id/debugButton"
+        android:layout_alignStart="@+id/debugButton"
+        android:textColor="#e4e1e1" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/textView2"
+        android:id="@+id/freeCamsView"
+        android:layout_marginTop="40dp">
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/freeCamsView"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/camTableView">
+
+    </GridLayout>
+
+</RelativeLayout>
